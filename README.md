@@ -18,7 +18,7 @@ None
 
 ## Service test
 
-Migration from REST to GraphQL test (other packages)
+Non running GraphQL service test (other packages)
 
 ### Implementation
 
