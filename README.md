@@ -1,5 +1,7 @@
 # GraphQL Service
 
+** **
+
 ## Demo running service
 
 Running GraphQL Service (inside package 'demo')
