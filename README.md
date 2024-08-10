@@ -1,6 +1,6 @@
 # GraphQL Migration Test
 
-Migration from REST to GraphQL test
+Migration from REST to GraphQL test.
 
 ## Implementation
 
