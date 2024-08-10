@@ -1,7 +1,5 @@
-package io.mb.onesearch.os4vs.core.graphql.data
-
-import io.mb.onesearch.os4vs.core.graphql.model.ModelQL.*
-import io.mb.onesearch.os4vs.core.graphql.resolver.ResolverQL
+import model.ModelQL.*
+import resolver.ResolverQL
 
 class DataProviderQL {
 
