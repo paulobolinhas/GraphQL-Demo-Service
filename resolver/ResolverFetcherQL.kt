@@ -1,8 +1,6 @@
-package io.mb.onesearch.os4vs.core.graphql.resolver
-
 import graphql.schema.DataFetcher
 import graphql.schema.DataFetchingEnvironment
-import io.mb.onesearch.os4vs.core.graphql.model.ModelQL
+import model.ModelQL
 
 class ResolverFetcherQL(private val resolver: ResolverQL) {
 
