@@ -1,16 +1,14 @@
-package io.mb.onesearch.os4vs.core.graphql.config
-
 import graphql.GraphQL
 import graphql.schema.idl.RuntimeWiring.newRuntimeWiring
 import graphql.schema.idl.SchemaGenerator
 import graphql.schema.idl.SchemaParser
-import io.mb.onesearch.os4vs.core.graphql.directives.TrimDirective
-import io.mb.onesearch.os4vs.core.graphql.directives.UppercaseDirective
-import io.mb.onesearch.os4vs.core.graphql.resolver.ResolverFetcherQL
+import directives.TrimDirective
+import directives.UppercaseDirective
+import resolver.ResolverFetcherQL
+import resolver.ResolverQL
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.core.io.ClassPathResource
-import io.mb.onesearch.os4vs.core.graphql.resolver.ResolverQL
 
 @Configuration
 class ConfigQL {
