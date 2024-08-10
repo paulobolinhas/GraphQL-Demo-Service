@@ -1,5 +1,3 @@
-package io.mb.onesearch.os4vs.core.graphql.model
-
 class ModelQL {
 
     data class Query(
