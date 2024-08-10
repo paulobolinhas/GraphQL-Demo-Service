@@ -1,10 +1,10 @@
 # GraphQL Service
 
-## Demo
+## Demo running service
 
 Running GraphQL Service (inside package 'demo')
 
-# Test
+## Service test
 
 Migration from REST to GraphQL test (other packages)
 
