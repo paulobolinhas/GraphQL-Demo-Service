@@ -45,7 +45,7 @@ Migration from REST to GraphQL test (other packages)
 
       [model](./model/ModelQL.kt)
 
-### Data Provider
+#### Data Provider
 
 - **Data Provider**:
     - Responsible for retrieving the data from the data source and filtering it based on the query parameters (passed on the resolver).
@@ -53,7 +53,7 @@ Migration from REST to GraphQL test (other packages)
 
       [provider](./data/DataProviderQL.kt)
 
-### Resolver
+#### Resolver
 
 - **Resolver**:
     - The class contains one single custom resolver that relies on a data provider instance to fetch and filter the data (based on the 'document' type filters),
@@ -81,7 +81,7 @@ Migration from REST to GraphQL test (other packages)
 
       [fetcher](./resolver/ResolverFetcherQL.kt)
 
-### Configuration
+#### Configuration
 
 - **Config**:
     - GraphQL configuration file.
@@ -90,7 +90,7 @@ Migration from REST to GraphQL test (other packages)
 
       [config](./config/ConfigQL.kt)
 
-## Considerations
+#### Considerations
 
 Filtering in levels (in the case where filters with the same name exist). - In that case, dependencies between resolvers are needed.
 
