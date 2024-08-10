@@ -1,4 +1,4 @@
-# from Rest to GraphQL Migration Test
+# GraphQL Migration Test
 
 Migration from REST to GraphQL test
 
