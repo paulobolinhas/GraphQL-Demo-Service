@@ -1,5 +1,3 @@
-package io.mb.onesearch.os4vs.core.graphql.directives
-
 import graphql.schema.DataFetcher
 import graphql.schema.DataFetchingEnvironment
 import graphql.schema.GraphQLFieldDefinition
