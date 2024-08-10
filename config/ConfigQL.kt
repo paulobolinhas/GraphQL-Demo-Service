@@ -15,7 +15,7 @@ class ConfigQL {
 
     @Bean
     fun graphQL(resolver: ResolverQL): GraphQL {
-        val schemaFilePath = "graphql/schema.graphqls"
+        val schemaFilePath = "model/schema.graphqls"
         val schemaFile = ClassPathResource(schemaFilePath).inputStream
 
         val schemaParser = SchemaParser()
