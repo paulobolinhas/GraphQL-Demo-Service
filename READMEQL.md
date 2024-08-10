@@ -1,10 +1,6 @@
-# GraphQL search - POC
+# from Rest to GraphQL Migration Test
 
-Search engine endpoint migration from REST to GraphQL (POC) - Integration, Creation, Performance & Optimization.
-
-## Overview
-
-The POC showcases how GraphQL can be used for the `os4vs` core search endpoint, providing a flexible and efficient alternative to REST.
+Migration from REST to GraphQL test
 
 ## Implementation
 
@@ -20,7 +16,7 @@ The POC showcases how GraphQL can be used for the `os4vs` core search endpoint, 
     - Type 'document' contains all filters and also the fields that are filters as well (required and non required). With that, filtering logic is
   easier to implement.
 
-      [schema](../../../../../../../resources/graphql/schema.graphqls)
+      [schema](./model/schema.graphqls)
 
 
 - **Directives**:
@@ -52,7 +48,7 @@ The POC showcases how GraphQL can be used for the `os4vs` core search endpoint, 
 - **Resolver**:
     - The class contains one single custom resolver that relies on a data provider instance to fetch and filter the data (based on the 'document' type filters),
     encapsulating the logic for querying and returning the relevant documents that match the given criteria.
-    - We only use 1 resolver. We want to access all the data just one time and do the filtering needed instantly.
+    - Only use 1 resolver. Want to access all the data just one time and do the filtering needed instantly.
 
       [resolver](./resolver/ResolverQL.kt)
 
@@ -71,7 +67,7 @@ The POC showcases how GraphQL can be used for the `os4vs` core search endpoint, 
 
 - **Fetcher**:
     - Responsible for registering data fetchers that map the queries to their corresponding resolver methods. It acts as a bridge between the GraphQL schema and the underlying resolver logic.
-    - Since we do all in one custom resolver, we have only one fetcher.
+    - Since it's done all in one custom resolver, only one fetcher is used.
 
       [fetcher](./resolver/ResolverFetcherQL.kt)
 
