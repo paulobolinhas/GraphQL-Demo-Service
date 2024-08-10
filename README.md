@@ -100,6 +100,6 @@ Migration from REST to GraphQL test (other packages)
 
 #### Considerations
 
-Filtering in levels (in the case where filters with the same name exist). - In that case, dependencies between resolvers are needed.
+- Filtering in levels (in the case where filters with the same name exist). - In that case, dependencies between resolvers are needed.
 
 
