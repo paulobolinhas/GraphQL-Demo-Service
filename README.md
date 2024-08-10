@@ -1,4 +1,4 @@
-# GraphQL Demo Service
+# GraphQL Demo Service Test
 
 ** **
 
