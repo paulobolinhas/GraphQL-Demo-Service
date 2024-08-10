@@ -82,6 +82,6 @@ Migration from REST to GraphQL test.
 
 ## Considerations
 
-**TO CONSIDER:** Filtering in levels (in case we have filters with the same name). - In that case we will need dependencies between resolvers.
+**TO CONSIDER:** Filtering in levels (in the case where filters with the same name exist). - In that case we will need dependencies between resolvers.
 
 
