@@ -4,13 +4,17 @@
 
 Running GraphQL Service (inside package 'demo')
 
+### Implementation
+
+Spring Initializr + GraphQL default setup
+
 ## Service test
 
 Migration from REST to GraphQL test (other packages)
 
-## Implementation
+### Implementation
 
-### Schema
+#### Schema
 
 - **Queries**:
   ```graphql
