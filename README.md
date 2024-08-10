@@ -1,6 +1,12 @@
 # GraphQL Service
 
-Migration from REST to GraphQL test.
+## Demo
+
+Running GraphQL Service (inside package 'demo')
+
+# Test
+
+Migration from REST to GraphQL test (other packages)
 
 ## Implementation
 
