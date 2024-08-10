@@ -8,6 +8,12 @@ Running GraphQL Service (inside package 'demo')
 
 Spring Initializr + GraphQL default setup
 
+### Considerations
+
+None
+
+** **
+
 ## Service test
 
 Migration from REST to GraphQL test (other packages)
