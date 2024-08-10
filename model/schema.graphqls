@@ -1,0 +1,24 @@
+directive @Uppercase on FIELD_DEFINITION
+directive @Trim on FIELD_DEFINITION
+
+type Query {
+    # filters (not only fields)
+    document(profileId: String!, vehicleCategory: VehicleCategory!, commissionNumber: String, vin: String): [Document]
+}
+
+type Document {
+    profileId: String @Uppercase @Trim
+    vehicleCategory: VehicleCategory
+    identification(commissionNumber: String, vin: String): Identification
+}
+
+type Identification {
+    commissionNumber: String
+    vin: String
+    licensePlate: String
+}
+
+enum VehicleCategory {
+    PASSENGER_CARS
+    VANS
+}
