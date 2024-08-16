@@ -1,14 +1,6 @@
 package io.mb.onesearch.os4vs.core.graphql.data
 
 import graphql.schema.DataFetchingEnvironment
-import io.mb.onesearch.os4vs.core.*
-import io.mb.onesearch.os4vs.core.dto.SearchResponseDto
-import io.mb.onesearch.os4vs.core.dto.toSearchResponseDto
-import io.mb.onesearch.os4vs.core.mapper.toQuery
-import io.mb.onesearch.os4vs.core.model.ContextType
-import io.mb.onesearch.os4vs.core.opensearch.search
-import io.mb.onesearch.os4vs.core.properties.MarketsConfiguration
-import io.mb.onesearch.os4vs.model.opensearch.VehicleDocument
 import org.opensearch.client.opensearch.OpenSearchAsyncClient
 import org.opensearch.client.opensearch.core.SearchRequest
 
