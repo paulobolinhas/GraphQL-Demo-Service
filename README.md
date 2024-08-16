@@ -1,23 +1,7 @@
 # GraphQL Demo Service Test
 
-** **
+## Service test phase 1 & 2
 
-## Demo running service
-
-Running GraphQL service (inside package 'demo')
-
-### Implementation
-
-Spring Initializr + GraphQL default setup
-
-### Considerations
-
-**TO DO** Implement with service tests below.
-
-** **
-
-## Service test 1 & 2
-
-Non running GraphQL service tests (other packages) - done in Mercedes-Benz.io internship (only the implementation here, not the whole project)
+GraphQL migration from REST (POC) - done in Mercedes-Benz.io internship (only the implementation here, not the whole project).
 
 
