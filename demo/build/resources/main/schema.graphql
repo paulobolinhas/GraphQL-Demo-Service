@@ -1,3 +1,0 @@
-type SearchQuery {
-    nothello: String
-}
