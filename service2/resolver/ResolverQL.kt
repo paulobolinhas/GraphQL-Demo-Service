@@ -1,11 +1,6 @@
 package io.mb.onesearch.os4vs.core.graphql.resolver
 
 import graphql.schema.DataFetchingEnvironment
-import io.mb.onesearch.os4vs.core.dto.SearchResponseDto
-import io.mb.onesearch.os4vs.core.graphql.data.ProviderQL
-import io.mb.onesearch.os4vs.core.model.*
-import io.mb.onesearch.os4vs.core.model.IntRange
-import io.mb.onesearch.os4vs.core.properties.MarketsConfiguration
 import org.opensearch.client.opensearch.OpenSearchAsyncClient
 import org.springframework.graphql.data.method.annotation.Argument
 import org.springframework.graphql.data.method.annotation.QueryMapping
