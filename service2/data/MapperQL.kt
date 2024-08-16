@@ -1,14 +1,5 @@
 package io.mb.onesearch.os4vs.core.graphql.data
 
-import io.mb.onesearch.os4vs.core.*
-import io.mb.onesearch.os4vs.core.mapper.validSorting
-import io.mb.onesearch.os4vs.core.model.ProductType
-import io.mb.onesearch.os4vs.core.model.Range
-import io.mb.onesearch.os4vs.core.model.SearchParameters
-import io.mb.onesearch.os4vs.core.model.Sort
-import io.mb.onesearch.os4vs.core.properties.MarketsConfiguration
-import io.mb.onesearch.os4vs.model.dto.StockItemState
-
 class MapperQL {
 
     val aux = AuxQL()
