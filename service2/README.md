@@ -20,7 +20,7 @@ The POC showcases how GraphQL can be used for the `os4vs` core search endpoint, 
     - Type 'search' contains all filters and also the fields that are filters as well (required and non required). With that, filtering logic is
   easier to implement.
 
-      [schema](../../../../../../../resources/graphql/schema.graphqls)
+      [schema](./schema.graphqls)
 
 ### Data 
 
