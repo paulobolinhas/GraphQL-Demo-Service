@@ -1,6 +1,6 @@
 # GraphQL - PoC
 
-**Done in Mercedes-Benz.io internship (only my implementation here, not the whole project code/configuration)**
+**Done in Mercedes-Benz.io internship (only my implementation here, not the whole project code/configuration).**
 
 phase 1, 2 & 3 - Integration, Creation & Performance/Optimization
 
