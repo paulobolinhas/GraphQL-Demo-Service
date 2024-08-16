@@ -1,4 +1,4 @@
-## Implementation (missing whole project config)
+## Phase 2 - Creation
 
 ### Schema
 
