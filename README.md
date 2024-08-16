@@ -4,7 +4,11 @@ NON RUNNING
 
 **Done in Mercedes-Benz.io internship (only my implementation here, not the whole project code/configuration).**
 
-phase 1, 2 & 3 - Integration, Creation & Performance/Optimization
+### Phases
+
+- phase 1: Integration
+- phase 2: Creation
+- phase 3: Performance/Optimization
 
 ### Overview
 
