@@ -1,4 +1,4 @@
-# GraphQL POC
+# GraphQL - PoC
 
 **Done in Mercedes-Benz.io internship (only the implementation here, not the whole project)**
 
