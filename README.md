@@ -1,6 +1,6 @@
 # GraphQL POC
 
-GraphQL migration from REST (POC) - done in Mercedes-Benz.io internship (only the implementation here, not the whole project).
+done in Mercedes-Benz.io internship (only the implementation here, not the whole project).
 
 Phase 1, 2 & 3 - Integration, Creation & Performance/Optimization.
 
