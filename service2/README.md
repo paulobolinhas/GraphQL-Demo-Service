@@ -1,4 +1,4 @@
-# GraphQL search - POC
+# GraphQL search - POC (Mercedes-Benz.io)
 
 Search engine endpoint migration from REST to GraphQL (POC) - Integration, Creation, Performance & Optimization.
 
@@ -6,7 +6,7 @@ Search engine endpoint migration from REST to GraphQL (POC) - Integration, Creat
 
 The POC showcases how GraphQL can be used for the `os4vs` core search endpoint, providing a flexible and efficient alternative to REST.
 
-## Implementation
+## Implementation (missing whole project config)
 
 ### Schema
 
