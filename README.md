@@ -1,6 +1,6 @@
 # GraphQL - PoC
 
-- NON RUNNING -
+NON RUNNING
 
 **Done in Mercedes-Benz.io internship (only my implementation here, not the whole project code/configuration).**
 
