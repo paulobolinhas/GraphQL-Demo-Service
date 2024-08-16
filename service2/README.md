@@ -1,4 +1,4 @@
-# GraphQL search - POC (Mercedes-Benz.io)
+# GraphQL search - POC (Mercedes-Benz.io) phase 2
 
 Search engine endpoint migration from REST to GraphQL (POC) - Integration, Creation, Performance & Optimization.
 
