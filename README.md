@@ -18,6 +18,6 @@ Spring Initializr + GraphQL default setup
 
 ## Service test 1 & 2
 
-Non running GraphQL service test (other packages)
+Non running GraphQL service tests (other packages) - done in Mercedes-Benz.io internship (only the implementation here, not the whole project)
 
 
