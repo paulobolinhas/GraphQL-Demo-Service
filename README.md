@@ -2,7 +2,7 @@
 
 **Done in Mercedes-Benz.io internship (only the implementation here, not the whole project)**
 
-## phase 1, 2 & 3 - Integration, Creation & Performance/Optimization.
+phase 1, 2 & 3 - Integration, Creation & Performance/Optimization.
 
 ### Overview
 
