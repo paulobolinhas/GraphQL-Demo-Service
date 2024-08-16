@@ -12,7 +12,7 @@ Spring Initializr + GraphQL default setup
 
 ### Considerations
 
-None
+**TO DO** Implement with service test below.
 
 ** **
 
