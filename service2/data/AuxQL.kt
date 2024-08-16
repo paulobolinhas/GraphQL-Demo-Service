@@ -1,11 +1,5 @@
 package io.mb.onesearch.os4vs.core.graphql.data
 
-import io.mb.onesearch.os4vs.core.*
-import io.mb.onesearch.os4vs.core.model.ContextType
-import io.mb.onesearch.os4vs.core.model.ProductType
-import io.mb.onesearch.os4vs.core.model.SearchParameters
-import io.mb.onesearch.os4vs.core.model.Sort
-import io.mb.onesearch.os4vs.core.properties.MarketProfile
 import org.opensearch.client.opensearch._types.FieldValue
 import org.opensearch.client.opensearch._types.SortOptions
 import org.opensearch.client.opensearch._types.SortOrder
