@@ -1,0 +1,541 @@
+type Query {
+    search(
+        page: Int! = 0,
+        limit: Int! = 10,
+        sortingType: String! = "price-asc",
+        profileId: String!,
+        vehicleCategory: String!,
+        contextType: ContextType! = B2C,
+        language: String,
+        modelIdentifier: [VehicleClass!],
+        bodyType: [BodyType!],
+        brand: [String!],
+        modelYear: Range,
+        price: ValueRange,
+        monthlyRate: ValueRange,
+        campaigns: [String!],
+        fuelType: [FuelTypeHarmonized!],
+        driveType: [TypeOfPropulsion!],
+        gearBox: [TransmissionCategory!],
+        enginePowerKW: Range,
+        enginePowerHP: Range,
+        upholstery: [String!],
+        upholsteryName: [String!],
+        upholsteryPolish: [String!],
+        equipment: [String!],
+        packages: [String!],
+        lines: [String!],
+        color: [String!],
+        colorName: [String!],
+        colorPolish: [String!],
+        baumuster4: String,
+        variantId: String,
+        dealerId: [String!],
+        stockType: [StockItemState!],
+        payload: IntRange,
+        maximumWeight: IntRange,
+        dimensionsLength: IntRange,
+        dimensionsWidth: IntRange,
+        dimensionsHeight: IntRange,
+        seats: [String!],
+        estimatedArrivalDate: Range,
+        motorization: [String!],
+        typeClass: [String!],
+        faceLift: Int,
+        vinOrCommissionNumber: String,
+        modelDesignation: [String!],
+        torque: IntRange,
+        vehicleHeight: IntRange,
+        wheelBase: IntRange,
+        generation: [Generation!],
+        productionDate: Range,
+        buildType: [String!],
+        mileage: IntRange,
+        firstRegistrationDate: Range,
+        stockCategories: [String!],
+    ): SearchResult
+}
+
+type SearchResult {
+    statistics: Statistics,
+    navigation: Navigation,
+    facets: [Facet!],
+    results: [Vehicle!]
+}
+
+input Range {
+    min: String!,
+    max: String!
+}
+
+input IntRange {
+    min: Int!,
+    max: Int!
+}
+
+input ValueRange {
+    min: Float!,
+    max: Float!
+}
+
+##############################
+#   Navigation definitions   #
+##############################
+
+type Navigation {
+    currentLimit: Int,
+    currentPage: Int,
+    currentContextType: ContextType,
+    currentProfileId: String,
+    currentVehicleCategory: String,
+    totalPages: Int,
+    totalResults: Int,
+    totalResultsWithoutGrouping: Int,
+    queryTimeMs: Int,
+    currentSortingCode: String,
+    currentLanguage: String,
+    selectedParameters: [SelectedParameter]
+}
+
+##################
+#   Statistics   #
+##################
+
+type Statistics {
+    processTimeMillis: Int,
+    queryTimeMillis: Int,
+}
+
+#########################
+#   Facet definitions   #
+#########################
+
+type Facet {
+    global: [Category!],   # facets that are calculated for the whole index
+    document: [Category!]  # facets that are calculated for the current search result
+}
+
+type Category {
+    id: String,
+    name: LocalizedData,
+    subCategories: [Category!],
+    values: [ValueData!],
+    facetType: FacetType
+}
+
+type LocalizedData {
+    lang: String,   # language code
+    text: String    # localized text
+}
+
+type ValueData {
+    value: String,
+    label: String,
+    formattedValue: String,
+    count: Int!,
+    min: Float,
+    max: Float,
+    minDate: String,
+    maxDate: String,
+    unit: String,
+    imageUrl: String
+}
+
+type SelectedParameter {
+    name: String!,
+    value: String!
+}
+
+################################
+#   Vehicle data definitions   #
+################################
+
+type Vehicle {
+    identification: Identification
+    vehicleModel: VehicleModel
+    technicalInformation: [TechnicalInformation!]
+    characteristics: [Characteristic!]
+    price: Price,
+    stock: Stock,
+    images: Images,
+    wholeSale: Boolean,
+    preProductionVehicle: Boolean,
+    estimatedArrivalDate: String,
+    productionDate: String,
+    buildType: String,
+    numberOfSimilarVehicles: Int,
+    usedVehicleDetails: UsedVehicleDetails
+}
+
+type Identification {
+    commissionNumber: String,
+    vin: String,
+    code: String!,
+    nationalSalesType: String,
+    dealerId: String,
+    allDealers: [String!],
+    variantId: String,
+    colorlessVariantId: String,
+    dcpProductType: String,
+    licensePlateNumber: String, # used vehicles only
+    registrationNumber: String  # used vehicles only
+}
+
+type VehicleModel {
+    vehicleClass: TechnicalData,
+    category: TechnicalData,
+    brand: TechnicalData,
+    bodyType: TechnicalData,
+    name: String,
+    nationalSalesType: String,
+    baumuster: String,
+    baumuster4: String,
+    modelYear: Int,
+    modelYearCode: String,
+    changeYear: String,
+    motorization: String,
+    typeClass: String,
+    faceLift: Int,
+    generation: Generation
+}
+
+type TechnicalInformation {
+    seats: TechnicalData,
+    bodyType: TechnicalData,
+    doors: TechnicalData,
+    acceleration: TechnicalData,
+    topSpeed: TechnicalData,
+    transmission: TechnicalData,
+    engine: Engine,
+    dimensions: Dimensions,
+    emissionAndConsumption: EmissionData,
+    payload: TechnicalData,
+    maximumWeight: TechnicalData,
+    enVKV: EnVKV
+}
+
+type Dimensions {
+    length: TechnicalData,
+    width: TechnicalData,
+    height: TechnicalData,
+    volume: TechnicalData,
+    wheelBase: TechnicalData,
+    vehicleHeight: TechnicalData
+}
+
+type TechnicalData {
+    label: String,
+    formattedValue: String,
+    value: String,
+    unit: String
+}
+
+type Engine {
+    typeOfPropulsion: TechnicalData,
+    power: Power!,
+    fuelType: TechnicalData,
+    engineConcept: TechnicalData,
+    capacity: TechnicalData,
+    cylinder: TechnicalData,
+    torque: TechnicalData
+}
+
+type EmissionData {
+    testProcedure: String!,
+    attributes: [EmissionAttribute!],
+    footnotes: String!
+}
+
+type EmissionAttribute {
+    id: String,
+    value: String,
+    unit: String,
+    label: String,
+    displayValue: String,
+    mustShowIn: [String!]
+}
+
+type Power {
+    label: String,
+    formattedValue: String,
+    combustionKw: TechnicalData,
+    combustionHp: TechnicalData,
+    electricKw: TechnicalData,
+    electricHp: TechnicalData,
+    combinedKw: TechnicalData,
+    combinedHp: TechnicalData
+}
+
+type EnVKV {
+    co2Cost: Co2Costs,
+    calculationBase: CalculationBase,
+    carTax: CarTax,
+    energyCost: String,
+    co2Classes: Co2Classes
+}
+
+type Co2Costs {
+    high: String,
+    middle: String,
+    low: String
+}
+
+type CalculationBase {
+    energyCostBaseDate: String,
+    co2PriceValidityFromDate: String,
+    co2PriceValidityToDate: String,
+    averageFuelPricePer100km: AvgFuelPrice,
+    averageKilometersPerYear: String,
+    co2PricesPerTon: Co2Costs
+}
+
+type AvgFuelPrice {
+    superplus: String,
+    super: String,
+    diesel: String,
+    electric: String,
+    superE10: String
+}
+
+type CarTax {
+    totalTax: String,
+    co2Tax: String,
+    engineCapacityTax: String
+}
+
+type Co2Classes {
+    primary: String
+}
+
+type Characteristic {
+    highlights: [VehicleHighlights!],
+    campaigns: [Campaigns!],
+    packages: [Packages!],
+    lines: [Lines!],
+    color: Color,
+    upholstery: Upholstery
+}
+
+type VehicleHighlights {
+    id: String,
+    type: String,
+    code: String,
+    codeType: String,
+    priority: Int,
+    label: String,
+    description: String,
+    images: [EquipmentImages!]
+}
+
+type EquipmentImages {
+    name: String,
+    images: [String!]
+}
+
+type Campaigns {
+    label: String,
+    description: String,
+    footnote: String
+}
+
+type Packages {
+    id: String,
+    label: String,
+    description: String,
+    images: [EquipmentImages!]
+}
+
+type Lines {
+    id: String,
+    label: String,
+    description: String,
+    images: [EquipmentImages!]
+}
+
+type Color {
+    name: String,
+    polish: String,
+    color: String,
+    image: String
+}
+
+type Upholstery {
+    name: String,
+    polish: String,
+    upholstery: String,
+    image: String
+}
+
+type Price {
+    currency: String,
+    formattedValue: String,
+    netValue: String,
+    grossValue: String,
+    monthlyRate: String,
+}
+
+type Stock {
+    stockLevelStatus: String,
+    stockType: StockItemState
+}
+
+type Images {
+    exterior: [String!],
+    interior: [String!],
+    misc: [String!],
+    default: String
+}
+
+type UsedVehicleDetails {
+    mileage: MileageData,
+    mileageExchangeEngine: MileageData,
+    firstRegistrationDate: String,
+    nextEmissionInspectionDate: String,
+    nextTechnicalInspectionDate: String,
+    numberOfPreviousOwners: Int,
+    damagesRepairedFlag: String,
+    damageAmount: Float,
+    warranty: Warranty,
+    stockCategories: [String!]
+}
+
+type MileageData {
+    label: String,
+    formattedValue: String,
+    value: Int,
+    unit: [LocalizedData!],
+    footnotes: [String!]
+}
+
+type Warranty {
+    code: String,
+    duration: String,
+    text: String
+}
+
+
+########################
+#   Enum definitions   #
+########################
+
+enum ContextType {
+    B2B,
+    B2C
+}
+
+enum FacetType {
+    RANGE,
+    SINGLE_VALUE,
+    MULTI_VALUE,
+    DATE_RANGE
+}
+
+enum Generation {
+    PREVIOUS_MODEL,
+    NEW_MODEL
+}
+
+enum BodyType {
+    ACTIVITY,
+    ALL_TERRAIN,
+    CABRIO,
+    CABRIO_ROADSTER,
+    CHASSIS,
+    CHASSIS_CREW_CAB,
+    COMPACT,
+    COUPE,
+    HATCHBACK,
+    HORIZON,
+    LIMOUSINE,
+    LONG_SEDAN,
+    MARCO_POLO,
+    MIXTO,
+    OFF_ROADER,
+    PANEL_VAN,
+    PEOPLE_CARRIER,
+    PICKUP,
+    ROADSTER,
+    SHOOTING_BRAKE,
+    SPORTS_TOURER,
+    STATION,
+    SUV,
+    TOURER,
+    VAN,
+    PLATFORM,
+    PLATFORM_CREW_CAB
+}
+
+enum TransmissionCategory {
+    MANUAL,
+    AUTOMATIC
+}
+
+enum VehicleClass {
+    A,
+    AMGGT,
+    B,
+    C,
+    CL,
+    CLA,
+    CLC,
+    CLE,
+    CLS,
+    CLK,
+    CITAN,
+    E,
+    EQA,
+    EQB,
+    EQC,
+    EQE,
+    EQS,
+    EQT,
+    EQV,
+    G,
+    GL,
+    GLA,
+    GLB,
+    GLC,
+    GLE,
+    GLK,
+    GLS,
+    GT,
+    M,
+    MARCOPOLO,
+    ML,
+    MAYBACH,
+    R,
+    S,
+    SL,
+    SLC,
+    SLK,
+    SLR,
+    SLS,
+    SPRINTER,
+    T,
+    V,
+    VITO,
+    W
+}
+
+enum StockItemState {
+    AVAILABLE,
+    GONE,
+    RESERVED,
+    ORDERED,
+    IN_PIPELINE
+}
+
+enum FuelTypeHarmonized {
+    PETROL,
+    DIESEL,
+    ELECTRIC,
+    GAS,
+    PETROL_ELECTRIC_PLUGIN_HYBRID,
+    DIESEL_ELECTRIC_PLUGIN_HYBRID
+}
+
+enum TypeOfPropulsion {
+    AWD,
+    RWD,
+    FWD
+}
