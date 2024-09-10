@@ -35,7 +35,7 @@
 - **Aux**:
     - Auxiliary class that contains functions to help data providing and mapping.
 
-      [aux](./data/AuxQl.kt)
+      [aux](./data/AuxQL.kt)
 
 ### Resolver
 
