@@ -19,6 +19,3 @@ NON RUNNING
 - Search engine endpoint migration from REST to GraphQL (POC) - Integration, Creation, Performance & Optimization.
 - The POC showcases how GraphQL can be used for the `os4vs` core search endpoint, providing a flexible and efficient alternative to REST.
 
-**Technologies:** GraphQL, Kotlin, Spring, Jira, Swagger, Docker, RabbitMQ, Postgres, pgAdmin, elasticVue, Nebula, Nexus, Datadog, Bitwarden, HTTP Toolkit.
-
-
