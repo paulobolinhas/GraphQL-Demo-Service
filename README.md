@@ -6,6 +6,8 @@ NON RUNNING
 
 **Done in Mercedes-Benz.io internship (only my implementation here, not the whole project code/configuration).**
 
+**Check [presentation](./service3/GraphQL_PoC.kt)
+
 ** **
 
 ### Phases
