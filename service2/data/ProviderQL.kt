@@ -1,5 +1,3 @@
-package io.mb.onesearch.os4vs.core.graphql.data
-
 import graphql.schema.DataFetchingEnvironment
 
 class ProviderQL(
