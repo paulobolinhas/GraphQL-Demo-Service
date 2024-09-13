@@ -1,9 +1,3 @@
-package io.mb.onesearch.os4vs.core.graphql.data
-
-import org.opensearch.client.opensearch._types.FieldValue
-import org.opensearch.client.opensearch._types.SortOptions
-import org.opensearch.client.opensearch._types.SortOrder
-import org.opensearch.client.opensearch._types.query_dsl.Query
 
 class AuxQL {
 
