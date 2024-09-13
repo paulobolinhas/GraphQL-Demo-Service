@@ -1,8 +1,6 @@
 package io.mb.onesearch.os4vs.core.graphql.data
 
 import graphql.schema.DataFetchingEnvironment
-import org.opensearch.client.opensearch.OpenSearchAsyncClient
-import org.opensearch.client.opensearch.core.SearchRequest
 
 class ProviderQL(
     private val openSearch: OpenSearchAsyncClient,
