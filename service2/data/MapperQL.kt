@@ -1,5 +1,3 @@
-package io.mb.onesearch.os4vs.core.graphql.data
-
 class MapperQL {
 
     val aux = AuxQL()
